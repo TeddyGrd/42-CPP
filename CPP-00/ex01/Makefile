@@ -6,13 +6,13 @@
 #    By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/16 18:46:09 by tguerran          #+#    #+#              #
-#    Updated: 2024/10/17 16:37:21 by tguerran         ###   ########.fr        #
+#    Updated: 2024/10/18 14:14:14 by tguerran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = myPhone
 
-CXX = g++
+CXX = c++
 
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
@@ -35,7 +35,7 @@ $(DIRS):
 	mkdir -p $(DIRS)
 
 $(OBJDIR)/%.o: %.cpp | $(DIRS)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OFILES)
 	$(CXX) $(CXXFLAGS) $(OFILES) -o $(NAME)

@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:59:38 by tguerran          #+#    #+#             */
-/*   Updated: 2024/10/17 17:14:47 by tguerran         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:15:38 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,39 @@ void PhoneBook::addContact()
 
 	std::cout << "enter your First name: ";
 	std::getline(std::cin, fname);
+	while(fname.empty())
+	{
+		std::cout << "First name cannot be empty. Please enter a value: ";
+		std::getline(std::cin,fname);
+	}
 	std::cout << "enter your Last name: ";
 	std::getline(std::cin, lname);
+	while(lname.empty())
+	{
+		std::cout << "Last name cannot be empty. Please enter a value: ";
+		std::getline(std::cin,lname);
+	}
 	std::cout << "enter your Phone Number: ";
 	std::getline(std::cin, phone);
+	while(phone.empty())
+	{
+		std::cout << "Phone number cannot be empty. Please enter a value: ";
+		std::getline(std::cin,phone);
+	}
 	std::cout << "enter your Nickname: ";
 	std::getline(std::cin, nickname);
+	while(nickname.empty())
+	{
+		std::cout << "Nickname cannot be empty. Please enter a value: ";
+		std::getline(std::cin,nickname);
+	}
 	std::cout << "enter your darkest secret: ";
 	std::getline(std::cin, secret);
+	while(secret.empty())
+	{
+		std::cout << "Your secret cannot be empty. Please enter a value: ";
+		std::getline(std::cin,secret);
+	}
 
 	contacts[nextIndex].setContact(fname, lname, phone, nickname, secret);
 
