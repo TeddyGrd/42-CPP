@@ -5,12 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/14 19:34:08 by tguerran          #+#    #+#              #
-#    Updated: 2024/10/23 00:32:25 by tguerran         ###   ########.fr        #
+#    Created: 2024/10/23 02:43:05 by tguerran          #+#    #+#              #
+#    Updated: 2024/10/23 03:09:23 by tguerran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+
+NAME = exo2
 
 CXX = c++
 
@@ -18,7 +19,7 @@ CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJDIR = obj
 
-SRC = megaphone.cpp
+SRC = main.cpp
 
 OFILES = $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 

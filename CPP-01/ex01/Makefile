@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/14 19:34:08 by tguerran          #+#    #+#              #
-#    Updated: 2024/10/23 00:32:25 by tguerran         ###   ########.fr        #
+#    Created: 2024/10/23 01:36:04 by tguerran          #+#    #+#              #
+#    Updated: 2024/10/23 02:36:49 by tguerran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = Zombie
 
 CXX = c++
 
@@ -18,7 +18,9 @@ CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJDIR = obj
 
-SRC = megaphone.cpp
+SRC = main.cpp \
+		Zombie.cpp \
+		zombieHorde.cpp
 
 OFILES = $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 
