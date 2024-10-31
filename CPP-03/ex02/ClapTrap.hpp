@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 00:46:39 by tguerran          #+#    #+#             */
-/*   Updated: 2024/10/31 21:15:53 by tguerran         ###   ########.fr       */
+/*   Created: 2024/10/30 00:46:54 by tguerran          #+#    #+#             */
+/*   Updated: 2024/10/31 14:49:17 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
-int main(void)
+#include <iostream>
+
+class ClapTrap
 {
-	ClapTrap clap("Teddy");
+	public:
+		ClapTrap(std::string name);
+		~ClapTrap();
+		void attack(const std::string& target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
+	protected:
+		std::string Name;
+		unsigned int HitPoints;
+		unsigned int EnergyPoints;
+		unsigned int AttackDamage;
+};
 
-	clap.attack("Target1");
-	clap.attack("Target2");
-
-	clap.takeDamage(1);
-	clap.takeDamage(2);
-
-	clap.beRepaired(1);
-	clap.beRepaired(1);
-
-	for(int i = 0; i < 10; i++)
-	{
-		clap.attack("Target1");
-	}
-	clap.beRepaired(2);
-
-	return 0;
-}
+#endif

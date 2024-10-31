@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 00:46:39 by tguerran          #+#    #+#             */
-/*   Updated: 2024/10/31 21:15:53 by tguerran         ###   ########.fr       */
+/*   Created: 2024/10/31 16:45:33 by tguerran          #+#    #+#             */
+/*   Updated: 2024/10/31 16:53:25 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int main(void)
+class FragTrap : public ClapTrap
 {
-	ClapTrap clap("Teddy");
+	public:
+		FragTrap(std::string name);
+		~FragTrap();
+		void highFivesGuys();
+	private:
+	
+};
 
-	clap.attack("Target1");
-	clap.attack("Target2");
-
-	clap.takeDamage(1);
-	clap.takeDamage(2);
-
-	clap.beRepaired(1);
-	clap.beRepaired(1);
-
-	for(int i = 0; i < 10; i++)
-	{
-		clap.attack("Target1");
-	}
-	clap.beRepaired(2);
-
-	return 0;
-}
+#endif

@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 00:46:39 by tguerran          #+#    #+#             */
-/*   Updated: 2024/10/31 21:15:53 by tguerran         ###   ########.fr       */
+/*   Created: 2024/10/31 14:10:33 by tguerran          #+#    #+#             */
+/*   Updated: 2024/10/31 14:20:46 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int main(void)
+class ScavTrap : public ClapTrap 
 {
-	ClapTrap clap("Teddy");
+	public:
+		ScavTrap(std::string name);
+		~ScavTrap();
+		void attack(const std::string& target);
+		void guardGate();
+	private:
+		
+};
 
-	clap.attack("Target1");
-	clap.attack("Target2");
-
-	clap.takeDamage(1);
-	clap.takeDamage(2);
-
-	clap.beRepaired(1);
-	clap.beRepaired(1);
-
-	for(int i = 0; i < 10; i++)
-	{
-		clap.attack("Target1");
-	}
-	clap.beRepaired(2);
-
-	return 0;
-}
+#endif
