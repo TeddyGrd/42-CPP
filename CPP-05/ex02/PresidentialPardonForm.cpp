@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 00:42:02 by tguerran          #+#    #+#             */
-/*   Updated: 2024/11/21 02:02:43 by tguerran         ###   ########.fr       */
+/*   Updated: 2024/11/21 14:45:10 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ void PresidentialPardonForm::execute(const Bureaucrat& executor) const
         throw AForm::GradeTooLowException();
     }
 
-    std::cout << "has been pardonned by Zaphod Beeblebrox" << std::endl;
+    std::cout << target << " has been pardonned by Zaphod Beeblebrox" << std::endl;
 }
