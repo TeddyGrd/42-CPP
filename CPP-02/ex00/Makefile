@@ -6,7 +6,7 @@
 #    By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 14:23:15 by tguerran          #+#    #+#              #
-#    Updated: 2024/10/28 15:35:52 by tguerran         ###   ########.fr        #
+#    Updated: 2024/11/25 19:08:15 by tguerran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = ex00
 
 CXX = c++
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fno-elide-constructors
 
 OBJDIR = obj
 
