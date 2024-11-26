@@ -6,11 +6,21 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:01:02 by tguerran          #+#    #+#             */
-/*   Updated: 2024/11/26 02:43:10 by tguerran         ###   ########.fr       */
+/*   Updated: 2024/11/26 03:46:34 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
+
+ScalarConverter::ScalarConverter()
+{
+    
+}
+
+ScalarConverter::~ScalarConverter()
+{
+    
+}
 
 void ScalarConverter::convert(const std::string &literal)
 {
