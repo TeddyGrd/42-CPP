@@ -5,21 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/28 14:23:15 by tguerran          #+#    #+#              #
-#    Updated: 2024/11/26 23:32:46 by tguerran         ###   ########.fr        #
+#    Created: 2024/10/30 00:46:23 by tguerran          #+#    #+#              #
+#    Updated: 2024/11/26 23:38:27 by tguerran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = ex01
 
 CXX = c++
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJDIR = obj
 
 SRC = main.cpp \
-		Fixed.cpp
+		Serializer.cpp \
 
 OFILES = $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 
