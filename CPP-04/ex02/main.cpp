@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 00:46:39 by tguerran          #+#    #+#             */
-/*   Updated: 2024/11/14 00:54:19 by tguerran         ###   ########.fr       */
+/*   Updated: 2024/11/28 03:29:01 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "WrongCat.hpp"
 
 int main() {
-    // const Animal* animal = new Animal(); //interdit Animal est abstraite.
+    // const Animal* animal = new Animal();
     
     const Animal* dog = new Dog();
     const Animal* cat = new Cat();

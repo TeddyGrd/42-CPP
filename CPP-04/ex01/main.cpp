@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 00:46:39 by tguerran          #+#    #+#             */
-/*   Updated: 2024/11/14 00:09:36 by tguerran         ###   ########.fr       */
+/*   Updated: 2024/11/28 03:32:49 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int main() {
     for (int index = 0; index < 10; ++index) {
         delete animals[index];
     }
-	std::cout << "bah alors" << std::endl;
 	Dog originalDog;
     originalDog.setIdea(0, "Play fetch");
     originalDog.setIdea(1, "Chase tail");
