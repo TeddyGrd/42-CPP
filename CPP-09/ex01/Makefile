@@ -6,11 +6,11 @@
 #    By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 00:46:23 by tguerran          #+#    #+#              #
-#    Updated: 2025/01/09 16:49:12 by tguerran         ###   ########.fr        #
+#    Updated: 2025/01/13 00:10:59 by tguerran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = rpn
+NAME = ex01
 
 CXX = c++
 
