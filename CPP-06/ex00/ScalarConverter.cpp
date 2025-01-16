@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:01:02 by tguerran          #+#    #+#             */
-/*   Updated: 2024/11/26 03:46:34 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/16 00:37:14 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,23 +78,23 @@ void ScalarConverter::convert(const std::string &literal)
         std::cout << "double: " << static_cast<double>(value) << ".0" << std::endl;
         return;
     }
-if (isFloatLiteral(literal)) {
-    float value = std::strtof(literal.c_str(), NULL);
-
-    std::cout << "char: impossible" << std::endl;
-    std::cout << "int: " << static_cast<int>(value) << std::endl;
-    if (std::floor(value) == value)
+    if (isFloatLiteral(literal))
     {
-        std::cout << "float: " << value << ".0f" << std::endl;
-    }
-    else
-    {
-        std::cout << "float: " << value << "f" << std::endl;
-    }
-    std::cout << "double: " << static_cast<double>(value) << std::endl;
-    return;
-}
+        float value = std::strtof(literal.c_str(), NULL);
 
+        std::cout << "char: impossible" << std::endl;
+        std::cout << "int: " << static_cast<int>(value) << std::endl;
+        if (std::floor(value) == value)
+        {
+            std::cout << "float: " << value << ".0f" << std::endl;
+        }
+        else
+        {
+            std::cout << "float: " << value << "f" << std::endl;
+        }
+        std::cout << "double: " << static_cast<double>(value) << std::endl;
+        return;
+    }
     if(isDoubleLiteral(literal))
     {
         double value = std::strtod(literal.c_str(), NULL);

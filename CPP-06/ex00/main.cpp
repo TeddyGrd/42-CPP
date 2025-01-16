@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 21:41:17 by tguerran          #+#    #+#             */
-/*   Updated: 2024/11/26 02:46:04 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/16 02:14:57 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 {
     if(argc == 1)
     {
-        std::cout << "Usage: <program> <value>" << std::endl;
+        std::cout << "Usage: ./ex00 <value>" << std::endl;
         return 1;
     }
     ScalarConverter::convert(argv[1]);
