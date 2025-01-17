@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 21:45:17 by tguerran          #+#    #+#             */
-/*   Updated: 2024/11/26 02:18:33 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/17 15:05:31 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class ScalarConverter
 {
     public:
         static void convert(const std::string &litteral);
+        ScalarConverter &operator=(ScalarConverter const& obj);
+        ScalarConverter(ScalarConverter const& obj);
     private:
         ScalarConverter();
         ~ScalarConverter();

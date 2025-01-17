@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 03:01:54 by tguerran          #+#    #+#             */
-/*   Updated: 2024/11/27 00:45:10 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/17 15:12:58 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class Serializer
     public:
         static uintptr_t serialize(Data* ptr);
         static Data* deserialize(uintptr_t raw);
+        Serializer(Serializer const& obj);
+        Serializer &operator=(Serializer const& obj);
         
     private:
         Serializer();
