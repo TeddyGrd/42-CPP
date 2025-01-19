@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:01:02 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/17 15:11:06 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/19 17:50:13 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ ScalarConverter::~ScalarConverter()
     
 }
 
+ScalarConverter::ScalarConverter(ScalarConverter const& obj)
+{
+    *this = obj;
+};
+
 ScalarConverter &ScalarConverter::operator=(ScalarConverter const& obj)
 {
     (void)obj;
     return *this;
-}
-
-ScalarConverter::ScalarConverter(ScalarConverter const& obj)
-{
-    *this = obj;
 }
 
 void ScalarConverter::convert(const std::string &literal)
@@ -61,7 +61,7 @@ void ScalarConverter::convert(const std::string &literal)
     }
     if(isCharLiteral(literal))
     {
-        char c = '\0';
+        char c;
         if (literal.length() == 1)
         {
             c = literal[0];
