@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:01:02 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/19 17:50:13 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/21 14:49:42 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ void ScalarConverter::convert(const std::string &literal)
     }
     if(isCharLiteral(literal))
     {
-        char c;
+        char c = '\0';
+        
         if (literal.length() == 1)
         {
             c = literal[0];
