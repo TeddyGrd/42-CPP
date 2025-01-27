@@ -6,7 +6,7 @@
 #    By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 00:46:23 by tguerran          #+#    #+#              #
-#    Updated: 2024/12/14 17:19:58 by tguerran         ###   ########.fr        #
+#    Updated: 2025/01/27 01:57:22 by tguerran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,7 @@ CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJDIR = obj
 
-SRC = main.cpp \
-		MutantStack.cpp
+SRC = main.cpp
 
 OFILES = $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 

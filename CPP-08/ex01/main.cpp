@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 14:26:31 by tguerran          #+#    #+#             */
-/*   Updated: 2024/12/14 16:56:44 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/27 01:48:10 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,15 @@ int main( void )
 		std::cout << "Longest span: " << sp.longestSpan() << std::endl;
 
 		std::vector<int> range;
-		for(int i = 0; i < 10; i++)
+		for(int i = 0; i < 1000; i++)
 		{
 			range.push_back(i);
 		}
-		Span sp2 = Span(10);
+		Span sp2 = Span(1000);
 		sp2.addRange(range.begin(), range.end());
-		sp2.addNumber(20);
-		sp2.addNumber(42);
-	
-		std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
-		std::cout << "Longest span: " << sp.longestSpan() << std::endl;
+		
+		std::cout << "Shortest span: " << sp2.shortestSpan() << std::endl;
+		std::cout << "Longest span: " << sp2.longestSpan() << std::endl;
 	}
 	catch (std::exception &e)
 	{

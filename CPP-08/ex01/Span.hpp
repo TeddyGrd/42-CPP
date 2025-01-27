@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 00:08:40 by tguerran          #+#    #+#             */
-/*   Updated: 2024/12/14 16:48:04 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/27 01:43:07 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,14 @@
 #include <algorithm>
 #include <climits>
 
+#define MAX_SPAN_SIZE 1000000
+
 class Span
 {
     public:
         Span(unsigned int N);
+        Span(Span const &obj);
+        Span &operator=(Span const &obj);
         ~Span();
 
         void addNumber(int number);
