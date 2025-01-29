@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 23:53:19 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/03 00:52:54 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/29 16:54:15 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class BitcoinExchange
 {
     public:
         BitcoinExchange();
+        BitcoinExchange &operator=(const BitcoinExchange &obj);
+        BitcoinExchange(const BitcoinExchange &obj);
         explicit BitcoinExchange(const std::string& databaseFilename);
         ~BitcoinExchange();
 

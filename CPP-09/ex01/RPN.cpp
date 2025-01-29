@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 16:26:10 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/13 00:02:42 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/29 17:29:19 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,17 @@ RPN::RPN()
 RPN::~RPN()
 {
     
+}
+
+RPN::RPN(const RPN& obj)
+{
+    *this = obj;
+}
+
+RPN& RPN::operator=(const RPN& obj)
+{
+    (void)obj;
+    return *this;
 }
 
 bool RPN::isOperator(char c) const

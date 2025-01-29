@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 16:26:15 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/09 17:00:53 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/13 01:10:03 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 {
     if(argc != 2)
     {
-        std::cerr << "Usage: ./rpn \"operation\"" << std::endl;
+        std::cerr << "Usage: ./ex01 \"operation\"" << std::endl;
         return 1;
     }
     try

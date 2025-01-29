@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 16:26:12 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/09 16:32:04 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/29 17:28:47 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class RPN
 {
     public:
         RPN();
+        RPN(const RPN& obj);
+        RPN& operator=(const RPN& obj);
         ~RPN();
         int calculate(const std::string& expr);
     private:

@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 00:47:44 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/03 01:43:05 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/29 16:57:12 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,20 @@ int toInt(const std::string& str)
 BitcoinExchange::BitcoinExchange()
 {
 
+}
+
+BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &obj)
+{
+    if (this != &obj)
+    {
+        _exchangeRates = obj._exchangeRates;
+    }
+    return *this;
+}
+
+BitcoinExchange::BitcoinExchange(const BitcoinExchange &obj)
+{
+    *this = obj;
 }
 
 BitcoinExchange::BitcoinExchange(const std::string& databaseFilename)
