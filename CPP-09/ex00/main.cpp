@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 23:48:56 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/29 16:58:03 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:51:49 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-    BitcoinExchange exchange("data.csv");
+    BitcoinExchange exchange("input.csv");
 
     try
     {

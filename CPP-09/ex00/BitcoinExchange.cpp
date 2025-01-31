@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 00:47:44 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/29 16:57:12 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/01/31 19:52:49 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,25 +71,28 @@ void BitcoinExchange::loadDatabase(const std::string& filename)
     }
     std::string line;
     std::getline(file, line);
-
     while (std::getline(file, line))
     {
         if (line.empty())
             continue;
-
+        std::string date, rateStr;
+        char separator = ',';
+        if (line.find('|') != std::string::npos)
+            separator = '|';
         std::istringstream stream(line);
-        std::string date;
-        std::string rateStr;
-
-        if(!std::getline(stream, date, ',') || !std::getline(stream, rateStr))
+        if (!std::getline(stream, date, separator) || !std::getline(stream, rateStr))
         {
             std::cerr << "Error: invalid line in datafile " << filename << std::endl;
-            return;
+            continue;
         }
+        date.erase(0, date.find_first_not_of(" \t"));
+        date.erase(date.find_last_not_of(" \t") + 1);
+        rateStr.erase(0, rateStr.find_first_not_of(" \t"));
+        rateStr.erase(rateStr.find_last_not_of(" \t") + 1);
         if (!isValidDate(date))
         {
             std::cerr << "Error: invalid date in datafile " << filename << std::endl;
-            return;
+            continue;
         }
         float rate;
         try
@@ -99,11 +102,10 @@ void BitcoinExchange::loadDatabase(const std::string& filename)
         catch (const std::exception& e)
         {
             std::cerr << "Error: invalid rate in datafile " << filename << std::endl;
-            return;
+            continue;
         }
         _exchangeRates[date] = rate;
     }
-
     file.close();
 }
 
