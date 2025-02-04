@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 00:16:44 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/29 21:48:53 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/02/04 00:38:56 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ int main(int argc, char** argv)
         PmergeMe sorter;
         std::cout << "Before sorting:" << std::endl;
         sorter.displayResult(vec, deq);
-        sorter.fordJohnsonSort(vec);
-        sorter.fordJohnsonSort(deq);
+        sorter.sortVector(vec);
+        sorter.sortDeque(deq);
         std::cout << "After sorting:" << std::endl;
         sorter.displayResult(vec, deq);
     }

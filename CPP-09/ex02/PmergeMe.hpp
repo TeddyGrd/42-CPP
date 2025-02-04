@@ -6,7 +6,7 @@
 /*   By: tguerran <tguerran@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 00:16:47 by tguerran          #+#    #+#             */
-/*   Updated: 2025/01/29 21:25:31 by tguerran         ###   ########.fr       */
+/*   Updated: 2025/02/04 01:55:45 by tguerran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,21 @@ class PmergeMe
         PmergeMe(const PmergeMe& obj);
         PmergeMe& operator=(const PmergeMe& obj);
         ~PmergeMe();
-        void displayResult(std::vector<int> const& v, std::deque<int> const& d) const;
-        void fordJohnsonSort(std::vector<int>& vec) const;
-        void fordJohnsonSort(std::deque<int>& deq) const;
-    
+
+        void displayResult(const std::vector<int>& v, const std::deque<int>& d) const;
+
+        void sortVector(std::vector<int>& deq) const;
+        void sortDeque(std::deque<int>& deq) const;
+        void fordJohnsonSortVector(std::vector<int>& vec) const;
+        void fordJohnsonSortDeque(std::deque<int>& deq) const;
+        std::deque<size_t> generateJacobsthalSequenceDeque(size_t n) const;
+        std::vector<size_t> generateJacobsthalSequenceVector(size_t n) const;
+        void binaryInsertVector(std::vector<int>& vec, int start, int end, int value) const;
+        void binaryInsertDeque(std::deque<int>& deq, int start, int end, int value) const;
+
     private:
-        void fordJohnsonMerge(std::vector<int>& main, std::vector<int>& subList) const;
-        void fordJohnsonMerge(std::deque<int>& main, std::deque<int>& subList) const;
+        void fordJohnsonMergeVector(std::vector<int>& main, std::vector<int>& subList) const;
+        void fordJohnsonMergeDeque(std::deque<int>& main, std::deque<int>& subList) const;
 };
 
 #endif
